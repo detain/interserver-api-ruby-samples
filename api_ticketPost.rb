@@ -7,8 +7,8 @@
 # ticket specified by ticketID.
 #
 # @param sid string the *Session ID* you get from the [api_login](#api_login) call
-# @param ticketID string 
-# @param content string 
+# @param ticketID string the id of the ticket to add a response to. you can use [api_getTicketList](#api_getTicketList) to get a list of your tickets 
+# @param content string the message to add to the ticket
 #
 require 'savon'
 
