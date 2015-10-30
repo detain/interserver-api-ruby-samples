@@ -8,8 +8,6 @@
 #
 require 'savon'
 
-# create a client for the service
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
-
-response = client.call(:api_get_license_types, message: {})
+response = client.call(:api_get_license_types, message: { })
 print response.body[:api_get_license_types_response][:return],"\n"

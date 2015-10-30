@@ -9,8 +9,6 @@
 #
 require 'savon'
 
-# create a client for the service
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
-
-response = client.call(:get_locked_ips, message: {})
+response = client.call(:get_locked_ips, message: { })
 print response.body[:get_locked_ips_response][:return],"\n"

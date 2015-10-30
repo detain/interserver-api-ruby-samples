@@ -12,14 +12,12 @@
 #
 require 'savon'
 
-# create a client for the service
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
 
-
-response = client.call(:api_login, message: {username: argv[1],password: argv[2]})
+response = client.call(:api_login, message: {username: ARGV[0],password: ARGV[1]})
 sid = response.body[:api_login_response][:return]
 if (sid == "")
   die("Got a blank session id");
 print "got session id ",sid,"\n"
-response = client.call(:api_get_prepay_paypal_fill_url, message: {})
+response = client.call(:api_get_prepay_paypal_fill_url, message: {sid: ARGV[63],  module: ARGV[64],  prepay_id: ARGV[65],  amount: ARGV[66],   })
 print response.body[:api_get_prepay_paypal_fill_url_response][:return],"\n"

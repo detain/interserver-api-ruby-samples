@@ -12,14 +12,12 @@
 #
 require 'savon'
 
-# create a client for the service
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
 
-
-response = client.call(:api_login, message: {username: argv[1],password: argv[2]})
+response = client.call(:api_login, message: {username: ARGV[0],password: ARGV[1]})
 sid = response.body[:api_login_response][:return]
 if (sid == "")
   die("Got a blank session id");
 print "got session id ",sid,"\n"
-response = client.call(:api_buy_license, message: {})
+response = client.call(:api_buy_license, message: {sid: ARGV[21],  ip: ARGV[22],  type: ARGV[23],  coupon: ARGV[24],   })
 print response.body[:api_buy_license_response][:return],"\n"

@@ -9,8 +9,6 @@
 #
 require 'savon'
 
-# create a client for the service
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
-
-response = client.call(:api_get_prepay_remaining, message: {})
+response = client.call(:api_get_prepay_remaining, message: {module: ARGV[48],   })
 print response.body[:api_get_prepay_remaining_response][:return],"\n"

@@ -9,8 +9,6 @@
 #
 require 'savon'
 
-# create a client for the service
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
-
-response = client.call(:get_hostname, message: {})
+response = client.call(:get_hostname, message: {ip: ARGV[286],   })
 print response.body[:get_hostname_response][:return],"\n"

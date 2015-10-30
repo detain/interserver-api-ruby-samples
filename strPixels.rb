@@ -13,8 +13,6 @@
 #
 require 'savon'
 
-# create a client for the service
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
-
-response = client.call(:strPixels, message: {})
+response = client.call(:strPixels, message: {string: ARGV[342],   })
 print response.body[:strPixels_response][:return],"\n"

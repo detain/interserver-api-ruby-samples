@@ -10,8 +10,6 @@
 #
 require 'savon'
 
-# create a client for the service
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
-
-response = client.call(:get_vps_slice_types, message: {})
+response = client.call(:get_vps_slice_types, message: { })
 print response.body[:get_vps_slice_types_response][:return],"\n"
