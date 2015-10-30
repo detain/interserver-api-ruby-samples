@@ -18,7 +18,7 @@ client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
 response = client.call(:api_login, message: {username: argv[1],password: argv[2]})
 sid = response.body[:api_login_response][:return]
 if (sid == "")
-	die("Got a blank session id");
+  die("Got a blank session id");
 print "got session id ",sid,"\n"
 response = client.call(:api_make_payment, message: {})
 print response.body[:api_make_payment_response][:return],"\n"
