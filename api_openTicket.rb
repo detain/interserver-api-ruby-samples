@@ -9,9 +9,9 @@
 # @param user_email string client email address
 # @param user_ip string client ip address
 # @param subject string subject of the ticket
-# @param product string 
+# @param product string the product/service if any this is in reference to.  
 # @param body string full content/description for the ticket
-# @param box_auth_value string 
+# @param box_auth_value string encryption string?
 #
 require 'savon'
 

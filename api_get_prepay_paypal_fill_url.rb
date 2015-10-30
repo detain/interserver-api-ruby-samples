@@ -6,9 +6,9 @@
 # Gets a PayPal URL to fill a PrePay.
 #
 # @param sid string the *Session ID* you get from the [api_login](#api_login) call
-# @param module string 
-# @param prepay_id int 
-# @param amount float 
+# @param module string the module the prepay is for. use [get_modules](#get_modules) to get a list of modules
+# @param prepay_id int the ID of the PrePay
+# @param amount float the amount to pay on the prepay.
 #
 require 'savon'
 
