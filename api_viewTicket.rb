@@ -17,14 +17,8 @@ sid = response.body[:api_login_response][:return]
 if (sid == "")
   die("Got a blank session id");
 print "got session id ",sid,"\n"
-response = client.call(:api_viewTicket, message: 
-
-{
-
-                                             sid: ARGV[0], 
-                                             ticketID: ARGV[1], 
-
-}
-
-)
+response = client.call(:api_viewTicket, message: {
+ 
+  sid: ARGV[0], 
+  ticketID: ARGV[1],} )
 print response.body[:api_viewTicket_response][:return],"\n"
