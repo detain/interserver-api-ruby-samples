@@ -11,7 +11,7 @@
 # @param sid string the *Session ID* you get from the [api_login](#api_login) call
 # @param module string the module the prepay is for. use [get_modules](#get_modules) to get a list of modules
 # @param amount float the dollar amount of prepay total
-# @param automatic_use xsd:boolean wether or not the prepay will get used automatically by billing system.
+# @param automatic_use bool wether or not the prepay will get used automatically by billing system.
 #
 require 'savon'
 
