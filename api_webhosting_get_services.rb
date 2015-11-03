@@ -17,7 +17,7 @@ sid = response.body[:api_login_response][:return]
 if (sid == "")
   die("Got a blank session id");
 print "got session id ",sid,"\n"
-response = client.call(:api_webhosting_get_services, message: {
- 
-  sid: ARGV[0],} )
+response = client.call(:api_webhosting_get_services, message: { 
+ sid: ARGV[0], 
+} )
 print response.body[:api_webhosting_get_services_response][:return],"\n"
