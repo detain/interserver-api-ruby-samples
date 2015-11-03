@@ -6,7 +6,7 @@
 # View/Retrieve information about the given ticketID.
 #
 # @param sid string the *Session ID* you get from the [login](#login) call
-# @param ticketID string the id of the ticket to retrieve. you can use [getTicketList](#getTicketList) to get a list of your tickets
+# @param ticketID string the id of the ticket to retrieve. you can use [getTicketList](#getticketlist) to get a list of your tickets
 #
 require 'savon'
 
