@@ -12,8 +12,7 @@ require 'savon'
 
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
 response = client.call(
-  :api_get_paypal_url, 
-  message: { 
+  :api_get_paypal_url, message: { 
     module: ARGV[0], 
     invoice: ARGV[1], 
 })

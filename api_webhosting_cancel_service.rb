@@ -15,8 +15,7 @@ require 'savon'
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
 
 response = client.call(
-  :api_login, 
-  message: {
+  :api_login, message: {
     username: ARGV[0],
     password: ARGV[1]
 })
@@ -25,8 +24,7 @@ if (sid == "")
   die("Got a blank session id");
 print "got session id ",sid,"\n"
 response = client.call(
-  :api_webhosting_cancel_service, 
-  message: { 
+  :api_webhosting_cancel_service, message: { 
     sid: ARGV[0], 
     id: ARGV[1], 
 })

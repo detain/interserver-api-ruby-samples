@@ -15,8 +15,7 @@ require 'savon'
 
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
 response = client.call(
-  :strPixels, 
-  message: { 
+  :strPixels, message: { 
     string: ARGV[0], 
 })
 print response.body[:strPixels_response][:return],"\n"
