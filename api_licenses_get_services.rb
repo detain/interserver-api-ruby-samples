@@ -6,7 +6,7 @@
 # This Function Applies to the Licensing services.
 # Gets List of Services
 #
-# @param sid string the *Session ID* you get from the [api_login](#api_login) call
+# @param sid string the *Session ID* you get from the [login](#login) call
 #
 require 'savon'
 

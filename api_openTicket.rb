@@ -5,7 +5,7 @@
 #
 # This command creates a new ticket in our system.  
 #
-# @param sid string the *Session ID* you get from the [api_login](#api_login) call
+# @param sid string the *Session ID* you get from the [login](#login) call
 # @param user_email string client email address
 # @param user_ip string client ip address
 # @param subject string subject of the ticket

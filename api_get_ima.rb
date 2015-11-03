@@ -7,7 +7,7 @@
 # admin. This is almost always going to return client, Adminsitrators will get an
 # admin response.
 #
-# @param sid string the *Session ID* you get from the [api_login](#api_login) call
+# @param sid string the *Session ID* you get from the [login](#login) call
 #
 require 'savon'
 

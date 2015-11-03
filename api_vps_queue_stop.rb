@@ -5,7 +5,7 @@
 #
 # stops a vps
 #
-# @param sid string the *Session ID* you get from the [api_login](#api_login) call
+# @param sid string the *Session ID* you get from the [login](#login) call
 # @param id int defaults to false, if specifeid tries usign that di instead of the one passed
 #
 require 'savon'

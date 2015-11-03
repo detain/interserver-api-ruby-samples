@@ -6,7 +6,7 @@
 # Gets a list of your current prepays added into the system and how much is left
 # on each one.
 #
-# @param sid string the *Session ID* you get from the [api_login](#api_login) call
+# @param sid string the *Session ID* you get from the [login](#login) call
 #
 require 'savon'
 

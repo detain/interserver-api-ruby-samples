@@ -6,7 +6,7 @@
 # This command returns a link to an animated screenshot of your VPS.   Only works
 # currently with KVM VPS servers
 #
-# @param sid string the *Session ID* you get from the [api_login](#api_login) call
+# @param sid string the *Session ID* you get from the [login](#login) call
 # @param id int false to link to the image itself , otherwise a url
 #
 require 'savon'

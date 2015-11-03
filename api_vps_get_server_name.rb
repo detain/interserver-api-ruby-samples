@@ -5,7 +5,7 @@
 #
 # Get the name of the vps master/host server your giving the id for
 #
-# @param sid string the *Session ID* you get from the [api_login](#api_login) call
+# @param sid string the *Session ID* you get from the [login](#login) call
 # @param id int id of the vps master
 #
 require 'savon'
