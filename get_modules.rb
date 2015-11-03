@@ -9,5 +9,5 @@
 require 'savon'
 
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
-response = client.call(:get_modules, message: { })
+response = client.call(:get_modules)
 print response.body[:get_modules_response][:return],"\n"

@@ -10,5 +10,5 @@
 require 'savon'
 
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
-response = client.call(:get_vps_locations_array, message: { })
+response = client.call(:get_vps_locations_array)
 print response.body[:get_vps_locations_array_response][:return],"\n"
