@@ -11,7 +11,7 @@
 # @param sid string the *Session ID* you get from the [api_login](#api_login) call
 # @param module string the module the prepay is for. use [get_modules](#get_modules) to get a list of modules
 # @param amount float the dollar amount of prepay total
-# @param automatic_use bool wether or not the prepay will get used automatically by billing system.
+# @param automatic_use xsd:boolean wether or not the prepay will get used automatically by billing system.
 #
 require 'savon'
 
@@ -22,5 +22,16 @@ sid = response.body[:api_login_response][:return]
 if (sid == "")
   die("Got a blank session id");
 print "got session id ",sid,"\n"
-response = client.call(:api_add_prepay, message: {sid: ARGV[53],  module: ARGV[54],  amount: ARGV[55],  automatic_use: ARGV[56],   })
+response = client.call(:api_add_prepay, message: 
+
+{
+
+                                             sid: ARGV[0], 
+                                             module: ARGV[1], 
+                                             amount: ARGV[2], 
+                                             automatic_use: ARGV[3], 
+
+}
+
+)
 print response.body[:api_add_prepay_response][:return],"\n"

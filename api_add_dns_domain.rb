@@ -20,5 +20,15 @@ sid = response.body[:api_login_response][:return]
 if (sid == "")
   die("Got a blank session id");
 print "got session id ",sid,"\n"
-response = client.call(:api_add_dns_domain, message: {sid: ARGV[338],  domain: ARGV[339],  ip: ARGV[340],   })
+response = client.call(:api_add_dns_domain, message: 
+
+{
+
+                                             sid: ARGV[0], 
+                                             domain: ARGV[1], 
+                                             ip: ARGV[2], 
+
+}
+
+)
 print response.body[:api_add_dns_domain_response][:return],"\n"

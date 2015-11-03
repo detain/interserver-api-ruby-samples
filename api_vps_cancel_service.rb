@@ -19,5 +19,14 @@ sid = response.body[:api_login_response][:return]
 if (sid == "")
   die("Got a blank session id");
 print "got session id ",sid,"\n"
-response = client.call(:api_vps_cancel_service, message: {sid: ARGV[147],  id: ARGV[148],   })
+response = client.call(:api_vps_cancel_service, message: 
+
+{
+
+                                             sid: ARGV[0], 
+                                             id: ARGV[1], 
+
+}
+
+)
 print response.body[:api_vps_cancel_service_response][:return],"\n"

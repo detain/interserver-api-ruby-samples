@@ -18,5 +18,15 @@ sid = response.body[:api_login_response][:return]
 if (sid == "")
   die("Got a blank session id");
 print "got session id ",sid,"\n"
-response = client.call(:api_change_license_ip_by_id, message: {sid: ARGV[34],  id: ARGV[35],  newip: ARGV[36],   })
+response = client.call(:api_change_license_ip_by_id, message: 
+
+{
+
+                                             sid: ARGV[0], 
+                                             id: ARGV[1], 
+                                             newip: ARGV[2], 
+
+}
+
+)
 print response.body[:api_change_license_ip_by_id_response][:return],"\n"

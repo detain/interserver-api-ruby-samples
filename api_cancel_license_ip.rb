@@ -18,5 +18,15 @@ sid = response.body[:api_login_response][:return]
 if (sid == "")
   die("Got a blank session id");
 print "got session id ",sid,"\n"
-response = client.call(:api_cancel_license_ip, message: {sid: ARGV[10],  ip: ARGV[11],  type: ARGV[12],   })
+response = client.call(:api_cancel_license_ip, message: 
+
+{
+
+                                             sid: ARGV[0], 
+                                             ip: ARGV[1], 
+                                             type: ARGV[2], 
+
+}
+
+)
 print response.body[:api_cancel_license_ip_response][:return],"\n"

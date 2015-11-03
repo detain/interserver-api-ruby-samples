@@ -17,5 +17,13 @@ sid = response.body[:api_login_response][:return]
 if (sid == "")
   die("Got a blank session id");
 print "got session id ",sid,"\n"
-response = client.call(:api_ssl_get_services, message: {sid: ARGV[136],   })
+response = client.call(:api_ssl_get_services, message: 
+
+{
+
+                                             sid: ARGV[0], 
+
+}
+
+)
 print response.body[:api_ssl_get_services_response][:return],"\n"

@@ -28,5 +28,23 @@ sid = response.body[:api_login_response][:return]
 if (sid == "")
   die("Got a blank session id");
 print "got session id ",sid,"\n"
-response = client.call(:api_api_buy_vps, message: {sid: ARGV[242],  os: ARGV[243],  slices: ARGV[244],  platform: ARGV[245],  controlpanel: ARGV[246],  period: ARGV[247],  location: ARGV[248],  version: ARGV[249],  hostname: ARGV[250],  coupon: ARGV[251],  rootpass: ARGV[252],   })
+response = client.call(:api_api_buy_vps, message: 
+
+{
+
+                                             sid: ARGV[0], 
+                                             os: ARGV[1], 
+                                             slices: ARGV[2], 
+                                             platform: ARGV[3], 
+                                             controlpanel: ARGV[4], 
+                                             period: ARGV[5], 
+                                             location: ARGV[6], 
+                                             version: ARGV[7], 
+                                             hostname: ARGV[8], 
+                                             coupon: ARGV[9], 
+                                             rootpass: ARGV[10], 
+
+}
+
+)
 print response.body[:api_api_buy_vps_response][:return],"\n"

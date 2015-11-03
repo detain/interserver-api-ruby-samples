@@ -17,5 +17,14 @@ sid = response.body[:api_login_response][:return]
 if (sid == "")
   die("Got a blank session id");
 print "got session id ",sid,"\n"
-response = client.call(:api_delete_dns_domain, message: {sid: ARGV[303],  domain_id: ARGV[304],   })
+response = client.call(:api_delete_dns_domain, message: 
+
+{
+
+                                             sid: ARGV[0], 
+                                             domain_id: ARGV[1], 
+
+}
+
+)
 print response.body[:api_delete_dns_domain_response][:return],"\n"

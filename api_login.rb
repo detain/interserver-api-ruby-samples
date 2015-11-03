@@ -12,5 +12,14 @@
 require 'savon'
 
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
-response = client.call(:api_login, message: {username: ARGV[3],  password: ARGV[4],   })
+response = client.call(:api_login, message: 
+
+{
+
+                                             username: ARGV[0], 
+                                             password: ARGV[1], 
+
+}
+
+)
 print response.body[:api_login_response][:return],"\n"
