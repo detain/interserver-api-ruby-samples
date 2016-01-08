@@ -7,7 +7,7 @@
 # ticket specified by ticketID.
 #
 # @param sid string the *Session ID* you get from the [login](#login) call
-# @param ticketID string the id of the ticket to add a response to. you can use [getTicketList](#getticketlist) to get a list of your tickets 
+# @param ticketID string the id of the ticket to add a response to. you can use [getTicketList](#getticketlist) to get a list of your tickets
 # @param content string the message to add to the ticket
 #
 require 'savon'
