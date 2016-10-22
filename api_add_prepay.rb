@@ -5,18 +5,17 @@
 #
 # Adds a PrePay into the system under the given module.    PrePays are a credit on
 # your account by prefilling  your account with funds.   These are stored in a
-# PrePay.    PrePay funds can be automaticaly used as needed or set to only be
+# PrePay.    PrePay funds can be automatically used as needed or set to only be
 # usable by direct action
 #
 # @param sid string the *Session ID* you get from the [login](#login) call
 # @param module string the module the prepay is for. use [get_modules](#get_modules) to get a list of modules
 # @param amount float the dollar amount of prepay total
-# @param automatic_use bool wether or not the prepay will get used automatically by billing system.
+# @param automatic_use bool whether or not the prepay will get used automatically by billing system.
 #
 require 'savon'
 
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
-
 response = client.call(
   :api_login, message: {
     username: ARGV[0],
@@ -32,5 +31,6 @@ response = client.call(
     module: ARGV[1], 
     amount: ARGV[2], 
     automatic_use: ARGV[3], 
+
 })
 print response.body[:api_add_prepay_response][:return],"\n"

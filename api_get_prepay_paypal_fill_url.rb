@@ -13,7 +13,6 @@
 require 'savon'
 
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
-
 response = client.call(
   :api_login, message: {
     username: ARGV[0],
@@ -29,5 +28,6 @@ response = client.call(
     module: ARGV[1], 
     prepay_id: ARGV[2], 
     amount: ARGV[3], 
+
 })
 print response.body[:api_get_prepay_paypal_fill_url_response][:return],"\n"

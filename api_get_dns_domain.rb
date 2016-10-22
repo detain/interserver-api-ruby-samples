@@ -11,7 +11,6 @@
 require 'savon'
 
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
-
 response = client.call(
   :api_login, message: {
     username: ARGV[0],
@@ -25,5 +24,6 @@ response = client.call(
   :api_get_dns_domain, message: { 
     sid: ARGV[0], 
     domain_id: ARGV[1], 
+
 })
 print response.body[:api_get_dns_domain_response][:return],"\n"

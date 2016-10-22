@@ -6,7 +6,7 @@
 # Get the PayPal payment URL for an invoice on a given module.
 #
 # @param module string the module the invoice is for. use [get_modules](#get_modules) to get a list of modules
-# @param invoice int the invoice id, or a comma seperated list of invoice ids to get a payment url for.  
+# @param invoice int the invoice id, or a comma separated list of invoice ids to get a payment url for.
 #
 require 'savon'
 
@@ -15,5 +15,6 @@ response = client.call(
   :api_get_paypal_url, message: { 
     module: ARGV[0], 
     invoice: ARGV[1], 
+
 })
 print response.body[:api_get_paypal_url_response][:return],"\n"

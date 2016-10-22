@@ -5,7 +5,7 @@
 #
 # This Function Applies to the Backup Services services.
 # Gets service info for the given ID in the given Module.   An example of this
-# would be in the "vps" modulei have order id
+# would be in the "vps" module have order id
 #
 # @param sid string the *Session ID* you get from the [login](#login) call
 # @param id int service id, such as VPS ID
@@ -13,7 +13,6 @@
 require 'savon'
 
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
-
 response = client.call(
   :api_login, message: {
     username: ARGV[0],
@@ -27,5 +26,6 @@ response = client.call(
   :api_backups_get_service, message: { 
     sid: ARGV[0], 
     id: ARGV[1], 
+
 })
 print response.body[:api_backups_get_service_response][:return],"\n"

@@ -3,7 +3,7 @@
 # api_openTicket
 #   scripted in 2015 by detain@interserver.net for the MyAdmin API
 #
-# This command creates a new ticket in our system.  
+# This command creates a new ticket in our system.
 #
 # @param sid string the *Session ID* you get from the [login](#login) call
 # @param user_email string client email address
@@ -16,7 +16,6 @@
 require 'savon'
 
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
-
 response = client.call(
   :api_login, message: {
     username: ARGV[0],
@@ -35,5 +34,6 @@ response = client.call(
     product: ARGV[4], 
     body: ARGV[5], 
     box_auth_value: ARGV[6], 
+
 })
 print response.body[:api_openTicket_response][:return],"\n"

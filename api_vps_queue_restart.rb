@@ -6,12 +6,11 @@
 # restart a vps
 #
 # @param sid string the *Session ID* you get from the [login](#login) call
-# @param id int defaults to false, if specifeid tries usign that di instead of the one passed
+# @param id int defaults to false, if specified tries using that id instead of the one passed
 #
 require 'savon'
 
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
-
 response = client.call(
   :api_login, message: {
     username: ARGV[0],
@@ -25,5 +24,6 @@ response = client.call(
   :api_vps_queue_restart, message: { 
     sid: ARGV[0], 
     id: ARGV[1], 
+
 })
 print response.body[:api_vps_queue_restart_response][:return],"\n"

@@ -13,7 +13,6 @@
 require 'savon'
 
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
-
 response = client.call(
   :api_login, message: {
     username: ARGV[0],
@@ -29,5 +28,6 @@ response = client.call(
     ip: ARGV[1], 
     type: ARGV[2], 
     coupon: ARGV[3], 
+
 })
 print response.body[:api_buy_license_response][:return],"\n"

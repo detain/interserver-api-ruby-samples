@@ -8,12 +8,11 @@
 # service will also cancel any addons for that service at the same time.
 #
 # @param sid string the *Session ID* you get from the [login](#login) call
-# @param id int the Order ID / Service ID you wish to cancel
+# @param id int ID / Service ID you wish to cancel
 #
 require 'savon'
 
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
-
 response = client.call(
   :api_login, message: {
     username: ARGV[0],
@@ -27,5 +26,6 @@ response = client.call(
   :api_ssl_cancel_service, message: { 
     sid: ARGV[0], 
     id: ARGV[1], 
+
 })
 print response.body[:api_ssl_cancel_service_response][:return],"\n"

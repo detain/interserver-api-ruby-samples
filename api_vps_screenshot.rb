@@ -12,7 +12,6 @@
 require 'savon'
 
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
-
 response = client.call(
   :api_login, message: {
     username: ARGV[0],
@@ -26,5 +25,6 @@ response = client.call(
   :api_vps_screenshot, message: { 
     sid: ARGV[0], 
     id: ARGV[1], 
+
 })
 print response.body[:api_vps_screenshot_response][:return],"\n"

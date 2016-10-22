@@ -12,7 +12,6 @@
 require 'savon'
 
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
-
 response = client.call(
   :api_login, message: {
     username: ARGV[0],
@@ -27,5 +26,6 @@ response = client.call(
     sid: ARGV[0], 
     module: ARGV[1], 
     invoice: ARGV[2], 
+
 })
 print response.body[:api_make_payment_response][:return],"\n"

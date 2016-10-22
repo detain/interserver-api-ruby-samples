@@ -6,13 +6,12 @@
 # Change the IP on an active license.
 #
 # @param sid string the *Session ID* you get from the [login](#login) call
-# @param id int the license order id of the license to change the ip for
-# @param newip string the new ip address to associate with the license
+# @param id int the old ip address
+# @param newip string the new ip address
 #
 require 'savon'
 
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
-
 response = client.call(
   :api_login, message: {
     username: ARGV[0],
@@ -27,5 +26,6 @@ response = client.call(
     sid: ARGV[0], 
     id: ARGV[1], 
     newip: ARGV[2], 
+
 })
 print response.body[:api_change_license_ip_by_id_response][:return],"\n"
