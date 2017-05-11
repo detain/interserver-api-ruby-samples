@@ -5,7 +5,7 @@
 #
 # Resolves an IP Address and returns the hostname it points to.
 #
-# @param ip string IP Address
+# @param ip string 
 #
 require 'savon'
 
