@@ -34,6 +34,5 @@ response = client.call(
     product: ARGV[4], 
     body: ARGV[5], 
     box_auth_value: ARGV[6], 
-
 })
 print response.body[:api_openTicket_response][:return],"\n"

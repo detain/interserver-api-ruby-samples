@@ -26,6 +26,5 @@ response = client.call(
     sid: ARGV[0], 
     module: ARGV[1], 
     invoice: ARGV[2], 
-
 })
 print response.body[:api_make_payment_response][:return],"\n"

@@ -24,6 +24,5 @@ response = client.call(
   :api_cancel_license, message: { 
     sid: ARGV[0], 
     id: ARGV[1], 
-
 })
 print response.body[:api_cancel_license_response][:return],"\n"

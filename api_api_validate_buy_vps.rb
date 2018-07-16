@@ -44,6 +44,5 @@ response = client.call(
     hostname: ARGV[8], 
     coupon: ARGV[9], 
     rootpass: ARGV[10], 
-
 })
 print response.body[:api_api_validate_buy_vps_response][:return],"\n"

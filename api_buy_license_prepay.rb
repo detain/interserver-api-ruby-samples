@@ -31,6 +31,5 @@ response = client.call(
     type: ARGV[2], 
     coupon: ARGV[3], 
     use_prepay: ARGV[4], 
-
 })
 print response.body[:api_buy_license_prepay_response][:return],"\n"

@@ -24,6 +24,5 @@ response = client.call(
   :api_vps_queue_stop, message: { 
     sid: ARGV[0], 
     id: ARGV[1], 
-
 })
 print response.body[:api_vps_queue_stop_response][:return],"\n"

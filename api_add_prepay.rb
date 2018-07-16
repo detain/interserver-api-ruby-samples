@@ -31,6 +31,5 @@ response = client.call(
     module: ARGV[1], 
     amount: ARGV[2], 
     automatic_use: ARGV[3], 
-
 })
 print response.body[:api_add_prepay_response][:return],"\n"

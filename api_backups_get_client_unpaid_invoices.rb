@@ -24,6 +24,5 @@ print "got session id ",sid,"\n"
 response = client.call(
   :api_backups_get_client_unpaid_invoices, message: { 
     sid: ARGV[0], 
-
 })
 print response.body[:api_backups_get_client_unpaid_invoices_response][:return],"\n"

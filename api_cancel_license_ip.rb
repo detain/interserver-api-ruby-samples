@@ -26,6 +26,5 @@ response = client.call(
     sid: ARGV[0], 
     ip: ARGV[1], 
     type: ARGV[2], 
-
 })
 print response.body[:api_cancel_license_ip_response][:return],"\n"

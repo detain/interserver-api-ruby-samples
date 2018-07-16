@@ -26,6 +26,5 @@ response = client.call(
     sid: ARGV[0], 
     domain_id: ARGV[1], 
     record_id: ARGV[2], 
-
 })
 print response.body[:api_delete_dns_record_response][:return],"\n"

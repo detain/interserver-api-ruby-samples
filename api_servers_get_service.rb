@@ -26,6 +26,5 @@ response = client.call(
   :api_servers_get_service, message: { 
     sid: ARGV[0], 
     id: ARGV[1], 
-
 })
 print response.body[:api_servers_get_service_response][:return],"\n"

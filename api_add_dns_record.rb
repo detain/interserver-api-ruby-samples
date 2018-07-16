@@ -34,6 +34,5 @@ response = client.call(
     type: ARGV[4], 
     ttl: ARGV[5], 
     prio: ARGV[6], 
-
 })
 print response.body[:api_add_dns_record_response][:return],"\n"

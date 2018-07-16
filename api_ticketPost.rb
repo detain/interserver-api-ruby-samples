@@ -27,6 +27,5 @@ response = client.call(
     sid: ARGV[0], 
     ticketID: ARGV[1], 
     content: ARGV[2], 
-
 })
 print response.body[:api_ticketPost_response][:return],"\n"

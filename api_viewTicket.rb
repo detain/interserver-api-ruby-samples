@@ -24,6 +24,5 @@ response = client.call(
   :api_viewTicket, message: { 
     sid: ARGV[0], 
     ticketID: ARGV[1], 
-
 })
 print response.body[:api_viewTicket_response][:return],"\n"

@@ -28,6 +28,5 @@ response = client.call(
     module: ARGV[1], 
     prepay_id: ARGV[2], 
     amount: ARGV[3], 
-
 })
 print response.body[:api_get_prepay_paypal_fill_url_response][:return],"\n"

@@ -28,6 +28,5 @@ response = client.call(
     ip: ARGV[1], 
     type: ARGV[2], 
     coupon: ARGV[3], 
-
 })
 print response.body[:api_buy_license_response][:return],"\n"

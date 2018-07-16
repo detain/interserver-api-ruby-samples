@@ -26,6 +26,5 @@ response = client.call(
     sid: ARGV[0], 
     id: ARGV[1], 
     newip: ARGV[2], 
-
 })
 print response.body[:api_change_license_ip_by_id_response][:return],"\n"

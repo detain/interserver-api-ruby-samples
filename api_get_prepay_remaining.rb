@@ -24,6 +24,5 @@ response = client.call(
   :api_get_prepay_remaining, message: { 
     sid: ARGV[0], 
     module: ARGV[1], 
-
 })
 print response.body[:api_get_prepay_remaining_response][:return],"\n"

@@ -46,6 +46,5 @@ response = client.call(
     coupon: ARGV[9], 
     rootpass: ARGV[10], 
     server: ARGV[11], 
-
 })
 print response.body[:api_api_buy_vps_admin_response][:return],"\n"

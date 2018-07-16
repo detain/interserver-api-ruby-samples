@@ -28,6 +28,5 @@ response = client.call(
     page: ARGV[1], 
     limit: ARGV[2], 
     status: ARGV[3], 
-
 })
 print response.body[:api_getTicketList_response][:return],"\n"

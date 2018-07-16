@@ -23,6 +23,5 @@ print "got session id ",sid,"\n"
 response = client.call(
   :api_ssl_get_services, message: { 
     sid: ARGV[0], 
-
 })
 print response.body[:api_ssl_get_services_response][:return],"\n"
