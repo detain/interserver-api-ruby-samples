@@ -3,7 +3,7 @@
 # api_quickservers_cancel_service
 #   scripted in 2015 by detain@interserver.net for the MyAdmin API
 #
-# This Function Applies to the QuickServers services.
+# This Function Applies to the Rapid Deploy Servers services.
 # Cancels a service for the passed module matching the passed id.  Canceling a
 # service will also cancel any addons for that service at the same time.
 #
