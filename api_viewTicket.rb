@@ -12,17 +12,17 @@ require 'savon'
 
 client = Savon.client(wsdl: 'https://my.interserver.net/api.php?wsdl')
 response = client.call(
-  :api_login, message: {
-    username: ARGV[0],
-    password: ARGV[1]
+	:api_login, message: {
+		username: ARGV[0],
+		password: ARGV[1]
 })
 sid = response.body[:api_login_response][:return]
 if (sid == "")
-  die("Got a blank session id");
+	die("Got a blank session id");
 print "got session id ",sid,"\n"
 response = client.call(
-  :api_viewTicket, message: { 
-    sid: ARGV[0], 
-    ticketID: ARGV[1], 
+	:api_viewTicket, message: { 
+		sid: ARGV[0], 
+		ticketID: ARGV[1], 
 })
 print response.body[:api_viewTicket_response][:return],"\n"
